@@ -1,0 +1,12 @@
+MyMVCApp/
+│
+├── Model/
+│   └── Student.cs
+│
+├── View/
+│   └── StudentView.cs
+│
+├── Controller/
+│   └── StudentController.cs
+│
+└── Program.cs
