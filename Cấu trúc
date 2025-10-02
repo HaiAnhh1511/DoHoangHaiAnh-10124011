@@ -1,12 +1,9 @@
-MyMVCApp/
-│
-├── Model/
-│   └── Student.cs
-│
-├── View/
-│   └── StudentView.cs
-│
-├── Controller/
-│   └── StudentController.cs
-│
-└── Program.cs
+MyMvcApp/
+ ├─ Models/
+ │   └─ Todo.cs
+ ├─ Controllers/
+ │   └─ TodoController.cs
+ ├─ Views/
+ │   └─ TodoView.cs
+ └─ Program.cs
+
