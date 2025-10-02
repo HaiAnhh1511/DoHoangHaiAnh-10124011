@@ -1,0 +1,25 @@
+class Program
+{
+    static void Main()
+    {
+        StudentView view = new StudentView();
+        StudentController controller = new StudentController(view);
+
+        // Thêm sinh viên
+        controller.AddStudent(1, "Le Phi Long", 3.2);
+        controller.AddStudent(2, "Do Hoang Hai Anh", 3.6);
+        controller.AddStudent(3, "Nguyen Khoa Bang", 2.9);
+
+        // Hiển thị danh sách
+        controller.DisplayAll();
+
+        // Tìm sinh viên
+        controller.FindStudentById(2);
+
+        // Xóa sinh viên
+        controller.RemoveStudent(1);
+
+        // Hiển thị danh sách sau khi xóa
+        controller.DisplayAll();
+    }
+}
