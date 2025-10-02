@@ -1,0 +1,43 @@
+// CONTROLLER: Điều phối giữa Model và View
+class StudentController
+{
+    private List<Student> students;
+    private StudentView view;
+
+    public StudentController(StudentView v)
+    {
+        students = new List<Student>();
+        view = v;
+    }
+
+    public void AddStudent(int id, string name, double gpa)
+    {
+        students.Add(new Student(id, name, gpa));
+        view.ShowMessage($">> Đã thêm sinh viên: {name}");
+    }
+
+    public void RemoveStudent(int id)
+    {
+        Student s = students.Find(st => st.Id == id);
+        if (s != null)
+        {
+            students.Remove(s);
+            view.ShowMessage($">> Đã xóa sinh viên ID = {id}");
+        }
+        else
+        {
+            view.ShowMessage(">> Không tìm thấy sinh viên cần xóa!");
+        }
+    }
+
+    public void FindStudentById(int id)
+    {
+        Student s = students.Find(st => st.Id == id);
+        view.ShowStudent(s);
+    }
+
+    public void DisplayAll()
+    {
+        view.ShowAllStudents(students);
+    }
+}
