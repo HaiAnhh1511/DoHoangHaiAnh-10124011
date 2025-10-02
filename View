@@ -1,0 +1,23 @@
+// VIEW: Hiển thị dữ liệu ra màn hình
+class StudentView
+{
+    public void ShowAllStudents(List<Student> students)
+    {
+        Console.WriteLine("\n===== DANH SÁCH SINH VIÊN =====");
+        foreach (var s in students)
+            Console.WriteLine($"ID: {s.Id} | Tên: {s.Name} | GPA: {s.GPA}");
+    }
+
+    public void ShowStudent(Student s)
+    {
+        if (s == null)
+            Console.WriteLine("Không tìm thấy sinh viên!");
+        else
+            Console.WriteLine($"[Sinh viên] ID: {s.Id}, Tên: {s.Name}, GPA: {s.GPA}");
+    }
+
+    public void ShowMessage(string msg)
+    {
+        Console.WriteLine(msg);
+    }
+}
