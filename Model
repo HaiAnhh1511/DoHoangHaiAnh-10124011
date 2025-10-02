@@ -1,0 +1,14 @@
+// MODEL: Dữ liệu sinh viên
+class Student
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public double GPA { get; set; }
+
+    public Student(int id, string name, double gpa)
+    {
+        Id = id;
+        Name = name;
+        GPA = gpa;
+    }
+}
